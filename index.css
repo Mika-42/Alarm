@@ -1,0 +1,373 @@
+/*****************************************************************************\
+|---Common--------------------------------------------------------------------|
+\*****************************************************************************/
+
+*, *::after, *::before {
+    outline: none;
+    font-family: Tahoma;
+    user-select: none;
+}
+
+#first, div button, aside button, header button {
+    background-color: transparent;
+}
+
+aside, #setupAlarm, .slider {
+    background-color: #1d1f30;
+}
+
+body, html, header, main, #alarm, #Hour, #Minute, .subGrid1, .lhs {
+    width: 100%;
+}
+
+.switch, #name, #Addbtn {
+    width: 80%;
+}
+
+body, html, aside, #setupAlarm, article, #first {
+    height: 100%;
+}
+
+.rappel, main {
+    height: 95%;
+}
+
+aside, label, #alarm, #Hour, #Minute {
+    justify-content: center;
+}
+
+body, header, main, aside, #setupAlarm, #first, .rappel, .lhs {
+    display: flex;
+}
+
+#alarm, #Article, .subGrid1 {
+    display: grid;
+}
+
+body, aside, #setupAlarm, #first, .lhs {
+    flex-direction: column;
+}
+
+body, html, header, main, aside, #setupAlarm, #name, .clock {
+    margin: 0;
+}
+
+.rappel, label, .slider, h1, #Article {
+    margin: auto;
+}
+
+header button, aside button, div button, #alarm, #name, #Addbtn {
+    color: white;
+}
+
+header, main {
+    flex-direction: row-reverse;
+}
+
+aside, #setupAlarm, #alarm {
+    align-items: center;
+}
+
+#name, aside button, header button {
+    border: none;
+}
+
+#name, #Addbtn, .rappel {
+    border-radius: 15px;
+}
+
+#Addbtn, div button {
+    border-color: transparent;
+}
+
+.rappel, #Addbtn {
+    margin-top: 10px;
+}
+
+/*****************************************************************************\
+|---Specific------------------------------------------------------------------|
+\*****************************************************************************/
+
+header {
+    -webkit-app-region: drag;
+    height: 5%;
+    background-color: #181a2b;
+}
+
+#Article {
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(4, 25%);
+
+}
+
+header button {
+    -webkit-app-region: no-drag;
+}
+
+header button:active {
+    background-color: #3d4054;
+}
+
+main {
+    background-color: #282a38;
+}
+
+#setupAlarm {
+    width: 15%;
+    min-width: 128px;
+    justify-content: end;
+}
+
+article {
+    width: 90%;
+}
+
+#Addbtn {
+    height: 50px;
+    font-size: 30px;
+    background-color: #4760ff;
+    margin-bottom: 30px;
+}
+
+#Addbtn:active {
+    width: 81%;
+    height: 51px;
+}
+
+/****************************************/
+
+.rappel {
+    width: 94%;
+    background: linear-gradient(80deg, rgba(0, 208, 255, 0.772), rgba(0, 0, 255, 0.458) 130%);
+    flex-wrap: wrap;
+}
+
+.rappel:hover {
+    width: 95%;
+    height: 95%;
+}
+
+/****************************************/
+div button {
+    width: 25px;
+    height: 25px;
+    border-top-right-radius: 15px;
+}
+
+div button:active {
+    color: black;
+}
+
+label {
+    text-align: center;
+}
+
+#alarm {
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 50px 30px 300px;
+    border-top: 4px solid;
+    border-image: linear-gradient(90deg,transparent,rgb(84, 112, 237), transparent) 1;
+}
+
+#Hour, #Minute {
+    display: inline-flex;
+    background-color: #1c183062;
+    height: 33.3%;
+    border-radius: 0px;
+    font-size: 35px;
+}
+
+#first {
+    width: 200%;
+    list-style-type: none;
+}
+
+#name {
+    margin-top: 5%;
+    height: 40px;
+    background-color: #131523;
+}
+
+
+.switch, .AlarmSlider {
+    position: relative;
+    display: inline-block;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    height: 90%;
+}
+
+.switch input, .AlarmSlider input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider, .AlarmSliderSpan {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #637a8e;
+    transition: .4s;
+    border-radius: 5px;
+}
+
+/*****************************************/
+.AlarmSlider {
+    width: 60px;
+    height: 34px;
+}
+
+.AlarmSliderSpan {
+    height: 32px;
+    width: 58px;
+    background-color: #c4c4c453;
+    border-radius: 34px;
+    grid-column: 1 / 3;
+}
+
+.AlarmSliderSpan:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+
+input:checked~.AlarmSliderSpan {
+    background-color: rgb(92, 209, 255);
+}
+
+input:checked~.AlarmSliderSpan:before {
+    transform: translateX(26px);
+}
+
+/*****************************************/
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+.slider:hover {
+    font-size: 20px;
+}
+
+.subGrid1 {
+    grid-template-columns: 17% 77% 10%;
+    height: 20%;
+}
+
+.lhs, .clock {
+    width: 50%;
+    height: 80%;
+}
+
+.lhs div {
+    border-left: 2px solid;
+    padding-left: 2px;
+    margin-left: 30%;
+    font-size: 17px;
+}
+
+.divTitle {
+    grid-column: 2 / 3;
+}
+
+.btnSlider {
+    grid-column: 3 / 3;
+}
+
+.clock {
+    font-size: 300%;
+}
+
+#Quit:hover {
+    background-color: #d05b5b;
+}
+
+#Min:hover, #Max:hover {
+    background-color: #898989;
+}
+
+/** small */
+@media (width <=1100px) {
+    #Article {
+        /*display: flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+        justify-content:flex-end;*/
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(8, 12%);
+    }
+
+    .rappel {
+        display: flex;
+        width: 89%;
+        height: 89%;
+        
+    }
+
+    .rappel:hover {
+        width: 90%;
+        height: 90%;
+    }
+
+    .lhs {
+        display: none;
+    }
+
+    .divTitle {
+        width: 65%;
+        visibility: hidden;
+    }
+
+    .subGrid1 {
+        display: flex;
+        justify-content: left;
+        width: 100%;
+        height: 40%;
+    }
+
+    .clock {
+        width: 100%;
+        height: 60%;
+        font-size: 150%;
+        text-align: right;
+        padding-right: 10px;
+    }
+}
+
+/*medium */
+@media (825px < width <=1350px) or (height <=810px) {
+    .subGrid1 {
+        display: flex;
+        justify-content: left;
+        width: 100%;
+        height: 40%;
+    }
+
+    .rappel {
+        margin-top: -2px;
+    }
+
+    .divTitle {
+        width: 70%;
+    }
+
+    .clock {
+        height: 30%;
+    }
+
+    .lhs {
+        visibility: hidden;
+        display: none;
+    }
+}

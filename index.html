@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="Content-Security-Policy"
+			content="default-src 'self'; script-src 'self'">
+		<link rel="stylesheet" href="index.css" />
+		<title>Alarm</title>
+	</head>
+
+
+
+	<body>
+		<header>
+			<button id="Quit">Quit</button>
+			<button id="Max">Maximize</button>
+			<button id="Min">minimize</button>
+		</header>
+
+		<main>
+			<article id="setupAlarm">
+				<form method="post" id="alarm">
+
+					<div id="Hour">00</div>
+					<div id="Minute">00</div>
+
+					<label for="Hour">Hours</label>
+					<label for="Minute">Minutes</label>
+
+
+					<div id="first">
+						<label class="switch">
+							<input type="checkbox" id="Monday" checked>
+							<span class="slider">Monday</span>
+							
+						</label>
+						
+						  <label class="switch">
+							<input type="checkbox" id="Tuesday" checked>
+							<span class="slider">Tuesday</span>
+						  </label>
+
+						  <label class="switch">
+							<input type="checkbox" id="Wednesday" checked>
+							<span class="slider">Wednesday</span>
+						  </label>
+
+						  <label class="switch">
+							<input type="checkbox" id="Thursday" checked>
+							<span class="slider">Thursday</span>
+						  </label>
+
+						  <label class="switch">
+							<input type="checkbox" id="Friday" checked>
+							<span class="slider">Friday</span>
+						  </label>
+
+						  <label class="switch">
+							<input type="checkbox" id="Saturday" checked>
+							<span class="slider">Saturday</span>
+						  </label>
+
+						  <label class="switch">
+							<input type="checkbox" id="Sunday" checked>
+							<span class="slider">Sunday</span>
+						  </label>
+
+						  
+					</div>
+				</form>
+				<input id="name" name="name" value="" type="text" spellcheck="false"
+				placeholder="Name" maxlength="10">
+
+				<button id="Addbtn">+</button>
+			</article>
+
+			<article id="Article">
+
+			</article>
+		</main>
+	</body>
+
+</html>
